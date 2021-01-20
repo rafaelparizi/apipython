@@ -6,7 +6,7 @@ app = Flask("Helius")
 
 @app.route("/olamundo",methods=["GET"])
 def olaMundo():
-    return {"ola" : "mundo"}
+    return geraResponse(200,"Ola mundo")
 
 
 #funcao para gerenciar responses
