@@ -1,12 +1,17 @@
 import os
 from flask import Flask, request
 from calculaOperacoes import calculaSoma
+from calculaOperacoes import getDia
 
 app = Flask("Helius")
 
 @app.route("/olamundo",methods=["GET"])
 def olaMundo():
     return geraResponse(200, "Ola mundo")
+
+@app.route("/getdata",methods=["GET"])
+def pegaData():
+    return geraResponse(200,getDia())
 
 #calculo de soma
 @app.route("/calcula/soma",methods=["POST"])
