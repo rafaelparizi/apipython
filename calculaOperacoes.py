@@ -7,6 +7,6 @@ def calculaSoma(num1, num2):
 
 #captura a data atual
 def getDia():
-    today = date.today
+    today = date.today()
     return {"data": today}
 
