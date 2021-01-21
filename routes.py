@@ -11,7 +11,8 @@ def olaMundo():
 
 @app.route("/getdata",methods=["GET"])
 def pegaData():
-    return geraResponse(200,getDia())
+    dia = getDia()
+    return geraResponse(200,"dia ok","dia",dia)
 
 #calculo de soma
 @app.route("/calcula/soma",methods=["POST"])
